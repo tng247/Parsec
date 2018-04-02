@@ -1,5 +1,5 @@
 name: parsec
-version: '139-1'
+version: '146-2'
 summary: Parsec game streaming client
 description: |
   Remotely connect to a gaming pc for a low latency remote computing
@@ -11,7 +11,8 @@ grade: stable
 
 apps:
   parsec:
-    command: desktop-launch $SNAP/usr/bin/parsec
+    command: desktop-launch $SNAP/usr/bin/parsecd
+    desktop: usr/share/applications/parsec.desktop
     plugs:
       - alsa
       - desktop
@@ -30,11 +31,11 @@ apps:
 parts:
   parsec:
     source: https://s3.amazonaws.com/parsec-build/package/parsec-linux.deb
-    source-type: deb
     plugin: dump
     after:
       - desktop-gtk2
     stage-packages:
+      - libsm6
       - libsndio6.1
       # FIX: Intel hardware video decoding
       - va-driver-all

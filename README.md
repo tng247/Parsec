@@ -15,7 +15,7 @@ For example:
 
 Then execute:
 
-* **Linux**: `~/Desktop/Parsec/generate_linux_package.sh`
+* **Linux**: `sudo ./generate_linux_package.sh`
 
 ## Contributing
 All content within this repository is free for both personal and commercial use without restriction (see [LICENSE](LICENSE)).
